@@ -5,7 +5,7 @@ import WAExample2 from './WebAnimations2';
 
 function App() {
   return (
-    <WAExample></WAExample>
+    <WAExample2></WAExample2>
   );
 }
 

@@ -24,6 +24,7 @@ const hide = (element) => {
 }
 
 const WAExample = () => {
+    //using ref to skip a re-render
     const didMountRef = useRef(false);
     const box = useRef(null)
     const [isVisible, setIsVisible] = useState(false)

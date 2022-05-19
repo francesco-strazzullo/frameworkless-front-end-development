@@ -13,27 +13,10 @@ const hideKeyframes = [
     ...showKeyframes
 ].reverse()
 
-const isElementVisible = (element) => {
-    const style = getComputedStyle(element)
-    const {
-        opacity
-    } = style
-
-    return parseInt(opacity) === 1
-}
-
-export const showIfNeeded = (element) => {
-    if (isElementVisible(element)) {
-        return
-    }
-
+export const show = (element) => {
     element.animate(showKeyframes, animationTiming)
 }
 
-export const hideIfNeeded = (element) => {
-    if (!isElementVisible(element)) {
-        return
-    }
-
+export const hide = (element) => {
     element.animate(hideKeyframes, animationTiming)
 }
