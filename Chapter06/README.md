@@ -1,4 +1,4 @@
-#  Chapter 6 - Routing
+# Chapter 5 - HTTP Requests
 
 [![framework less](https://file-blyuofkggj.now.sh)](https://github.com/frameworkless-movement/manifesto)
 

@@ -1,3 +1,10 @@
-import HelloWorld from './components/HelloWorld.js'
+const button = document.querySelector('button')
+const div = document.querySelector('div')
 
-window.customElements.define('hello-world', HelloWorld)
+div.addEventListener('click', () => {
+  console.log('Div Clicked')
+}, false)
+
+button.addEventListener('click', e => {
+  console.log('Button Clicked')
+}, false)

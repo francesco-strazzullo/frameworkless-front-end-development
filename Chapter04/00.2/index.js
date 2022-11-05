@@ -1,19 +1,11 @@
-import HelloWorld from './components/HelloWorld.js'
+const button = document.querySelector('button')
+const div = document.querySelector('div')
 
-window
-  .customElements
-  .define('hello-world', HelloWorld)
+div.addEventListener('click', () => {
+  console.log('Div Clicked')
+}, false)
 
-const changeColorTo = color => {
-  document
-    .querySelectorAll('hello-world')
-    .forEach(helloWorld => {
-      helloWorld.color = color
-    })
-}
-
-document
-  .querySelector('button')
-  .addEventListener('click', () => {
-    changeColorTo('blue')
-  })
+button.addEventListener('click', e => {
+  e.stopPropagation()
+  console.log('Button Clicked')
+}, false)

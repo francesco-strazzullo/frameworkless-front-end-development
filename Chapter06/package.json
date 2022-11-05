@@ -1,12 +1,23 @@
 {
   "scripts": {
-    "start": "http-server & serve -p 8081 -s 01 & serve -p 8082 -s 01.1 & serve -p 8083 -s 02",
-    "test": "jest"
+    "start": "nodemon server"
+  },
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "express": "4.16.4",
+    "lodash.findindex": "4.6.0",
+    "uuid": "3.3.2"
   },
   "devDependencies": {
-    "http-server": "0.11.1",
-    "jest": "23.6.0",
-    "serve": "10.1.2",
+    "nodemon": "1.18.10",
     "standard": "12.0.1"
+  },
+  "standard": {
+    "globals": [
+      "XMLHttpRequest",
+      "fetch",
+      "Headers",
+      "axios"
+    ]
   }
 }

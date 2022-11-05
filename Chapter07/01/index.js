@@ -1,36 +1,28 @@
-import todosView from './view/todos.js'
-import counterView from './view/counter.js'
-import filtersView from './view/filters.js'
-import appView from './view/app.js'
-import applyDiff from './applyDiff.js'
+import createRouter from './router.js'
+import createPages from './pages.js'
 
-import registry from './registry.js'
+const container = document.querySelector('main')
 
-import modelFactory from './model/model.js'
+const pages = createPages(container)
 
-registry.add('app', appView)
-registry.add('todos', todosView)
-registry.add('counter', counterView)
-registry.add('filters', filtersView)
+const router = createRouter()
 
-const model = modelFactory()
+router
+  .addRoute('/', pages.home)
+  .addRoute('/list', pages.list)
+  .addRoute('/list/:id', pages.detail)
+  .addRoute('/list/:id/:anotherId', pages.anotherDetail)
+  .setNotFound(pages.notFound)
+  .start()
 
-const {
-  addChangeListener,
-  ...events
-} = model
+const NAV_BTN_SELECTOR = 'button[data-navigate]'
 
-const render = (state) => {
-  window.requestAnimationFrame(() => {
-    const main = document.querySelector('#root')
-
-    const newMain = registry.renderRoot(
-      main,
-      state,
-      events)
-
-    applyDiff(document.body, main, newMain)
+document
+  .body
+  .addEventListener('click', e => {
+    const { target } = e
+    if (target.matches(NAV_BTN_SELECTOR)) {
+      const { navigate } = target.dataset
+      router.navigate(navigate)
+    }
   })
-}
-
-addChangeListener(render)
