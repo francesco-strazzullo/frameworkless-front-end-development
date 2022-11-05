@@ -1,7 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const uuidv4 = require('uuid/v4')
-const findIndex = require('lodash.findindex')
+const { v4: uuidv4 } = require('uuid')
 
 const PORT = 8080
 
@@ -29,8 +28,7 @@ app.post('/api/todos', (req, res) => {
 })
 
 app.patch('/api/todos/:id', (req, res) => {
-  const updateIndex = findIndex(
-    todos,
+  const updateIndex = todos.findIndex(
     t => t.id === req.params.id
   )
   const oldTodo = todos[updateIndex]
