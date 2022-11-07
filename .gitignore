@@ -62,3 +62,4 @@ typings/
 .cache
 dist
 Chapter03/old
+.DS_Store

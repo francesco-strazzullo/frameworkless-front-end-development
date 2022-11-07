@@ -1,0 +1,17 @@
+<div class="container">
+    <button class="confirm" data-ng-click="goToNewTweet()">
+        New Tweet
+    </button>
+    <div class="item hoverable" data-ng-repeat="item in list">
+        <img class="avatar" ng-src="{{item.avatar}}" />
+        <div class="item-content">
+            <div>
+                <span class="name">{{item.name}}</span>
+                <small class="username">{{item.userName}}</small>
+            </div>
+            <div class="tweet">
+                {{item.tweet}}
+            </div>
+        </div>
+    </div>
+</div>

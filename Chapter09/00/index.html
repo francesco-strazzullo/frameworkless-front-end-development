@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Angular / Webpack Strangler</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <!-- build:css strangler.min.css -->
+        <link rel="stylesheet" href="app/style/app.css"/>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <header class="list-header">
+            <h1>Angular Strangler Twitter</h1>
+        </header>
+        <div ng-view></div>
+        <!-- build:js strangler.min.js -->
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+        <script src="app/boot.js"></script>
+        <script src="app/src/services/tweets.js"></script>
+        <script src="app/src/controllers/list.js"></script>
+        <script src="app/src/controllers/tweet.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
