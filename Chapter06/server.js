@@ -28,19 +28,29 @@ app.post('/api/todos', (req, res) => {
 })
 
 app.patch('/api/todos/:id', (req, res) => {
-  const updateIndex = todos.findIndex(
+  const indexToUpdate = todos.findIndex(
     t => t.id === req.params.id
   )
-  const oldTodo = todos[updateIndex]
+  const oldTodo = todos[indexToUpdate]
 
   const newTodo = {
     ...oldTodo,
     ...req.body
   }
 
-  todos[updateIndex] = newTodo
+  todos[indexToUpdate] = newTodo
 
   res.send(newTodo)
+})
+
+app.put('/api/todos/:id', (req, res) => {
+  const indexToUpdate = todos.findIndex(
+    t => t.id === req.params.id
+  )
+
+  todos[indexToUpdate] = req.body
+
+  res.send(req.body)
 })
 
 app.delete('/api/todos/:id', (req, res) => {
