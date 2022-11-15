@@ -1,4 +1,4 @@
-# Chapter 4 - Web Components
+# Chapter 3 - Managing DOM Events
 
 [![framework less](https://file-blyuofkggj.now.sh)](https://github.com/frameworkless-movement/manifesto)
 

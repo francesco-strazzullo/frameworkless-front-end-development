@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1997F0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.list-header {
+    margin: 0;
+    height: 50px;
+    background-color: white;
+    border-bottom:rgba(0, 0, 0, 0.25) solid 2px;
+}
+
+.list-header h1 {
+    color: #1997F0;
+    line-height: 50px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.container {
+    margin: 20px 25%;
+    width: 50%;
+    background-color: white;
+    color: #1997F0;
+}
+
+.confirm {
+    border: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(190, 219, 240);
+    border-bottom: #1997F0 solid 1px;
+    color: #1997F0;
+    font-size: 15pt;
+    cursor: pointer;
+}
+
+.confirm:hover { 
+    background-color: rgb(122, 190, 238);
+}
+
+.item {
+    height: 150px;
+    padding: 20px;
+    border-bottom: #1997F0 solid 1px;
+    display: flex;
+}
+
+.item.hoverable:hover {
+    background-color: aliceblue;
+}
+
+img.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.item .item-content{
+    flex: 1;
+    padding-left: 20px;
+}
+
+.item .item-content .name{
+    color: black;
+    font-weight: bolder;
+}
+
+.item .item-content .username{
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 0.8em;
+}
+
+.item .item-content .tweet{
+    padding-top: 20px;
+    color: black;
+}
+
+.tweet-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-form progress {
+    width: 100%;
+    height: 20px;
+}
+
+.tweet-form textarea {
+    font-size: 18px;
+    resize: none;
+    overflow: auto;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    height: 120px;
+    border-radius: 15px;
+    border: 3px solid rgba(0, 0, 0, 0.25);
+}
+

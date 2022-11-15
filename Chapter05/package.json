@@ -1,23 +1,25 @@
 {
   "scripts": {
-    "start": "nodemon server"
-  },
-  "dependencies": {
-    "body-parser": "1.18.3",
-    "express": "4.16.4",
-    "lodash.findindex": "4.6.0",
-    "uuid": "3.3.2"
+    "start": "http-server",
+    "deploy": "now && now alias",
+    "test": "jest"
   },
   "devDependencies": {
-    "nodemon": "1.18.10",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
+    "http-server": "0.11.1",
+    "jest": "23.6.0",
+    "now": "12.0.1",
     "standard": "12.0.1"
   },
   "standard": {
     "globals": [
-      "XMLHttpRequest",
-      "fetch",
-      "Headers",
-      "axios"
+      "expect",
+      "test",
+      "beforeEach",
+      "describe",
+      "CustomEvent",
+      "HTMLElement",
+      "fetch"
     ]
   }
 }

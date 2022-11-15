@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="item">
+        <div class="tweet-form">
+            <textarea placeholder="write your tweet here..." maxlength="140"></textarea>
+            <my-app-progress-bar></my-app-progress-bar>
+            <my-app-character-counter></my-app-character-counter>
+        </div>
+    </div>
+    <button class="confirm" data-ng-disabled="!tweet" data-ng-click="sendTweet()">
+        Send
+    </button>
+</div>

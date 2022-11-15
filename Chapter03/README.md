@@ -1,4 +1,4 @@
-# Chapter 3 - Managing DOM Events
+# Chapter 2 - Rendering
 
 [![framework less](https://file-blyuofkggj.now.sh)](https://github.com/frameworkless-movement/manifesto)
 

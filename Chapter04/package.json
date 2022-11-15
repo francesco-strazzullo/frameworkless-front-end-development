@@ -17,9 +17,7 @@
       "test",
       "beforeEach",
       "describe",
-      "CustomEvent",
-      "HTMLElement",
-      "fetch"
+      "CustomEvent"
     ]
   }
 }
